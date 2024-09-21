@@ -39,7 +39,7 @@ const ListPage = () => {
     return () => {
       debouncedSearch.cancel(); // Cleanup on component unmount
     };
-  }, [inputSearch]);
+  }, [debouncedSearch,inputSearch]);
 
   return (
     <div className="list-page-container"> {/* Container for the list page */}
