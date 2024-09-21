@@ -1,7 +1,6 @@
 // useFetch.js
 import { useState, useEffect } from 'react';
 import axios from 'axios'; // Axios for making HTTP requests
-import { baseURL } from '../constants/constants';
 
 // Custom hook to fetch books based on genre, page, and optional search term
 const useFetch = (genre, page, search) => {
@@ -14,8 +13,8 @@ const useFetch = (genre, page, search) => {
       setLoading(true); // Set loading state to true
       try {
         const response = await axios.get(
-          `${baseURL}books?topic=${genre}&search=${search}&mime_type=image&page=${page}` // Fetch books from API
-        );
+          `/.netlify/functions/proxy?topic=${genre}&search=${search}&page=${page}`
+        );        
         const { results, next } = response?.data; // Destructure results and next page info
         // console.log(page, response.data); // Log current page and response data
         if (!next) setLastPage(true); // If no next page, set lastPage to true
