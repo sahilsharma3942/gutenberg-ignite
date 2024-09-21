@@ -20,9 +20,12 @@ const BookList = ({ books, lastBookElementRef }) => {
     }
   };
 
+  
+
   return (
     <div className="book-container"> {/* Container for book cards */}
       {books.map((book, index) => (
+        
         <div
           ref={index === books.length - 1 ? lastBookElementRef : null} // Attach ref to the last book card for infinite scroll
           className="book-card" // Style for individual book card

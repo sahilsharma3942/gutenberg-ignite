@@ -39,7 +39,7 @@ const ListPage = () => {
     return () => {
       debouncedSearch.cancel(); // Cleanup on component unmount
     };
-  }, [debouncedSearch,inputSearch]);
+  }, [inputSearch]);
 
   return (
     <div className="list-page-container"> {/* Container for the list page */}
@@ -48,8 +48,8 @@ const ListPage = () => {
         inputSearch={inputSearch} // Pass current search input
         setInputSearch={setInputSearch} // Function to update search input
       />
-      <BookList books={books} lastBookElementRef={lastBookElementRef} /> {/* Render the list of books */}
-      <Loader loading={loading} /> {/* Show loader when loading books */}
+      <BookList books={books} lastBookElementRef={lastBookElementRef} /> 
+      <Loader loading={loading} /> 
     </div>
   );
 };

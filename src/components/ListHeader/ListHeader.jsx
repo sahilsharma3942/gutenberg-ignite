@@ -10,9 +10,9 @@ const ListHeader = ({ genre, inputSearch, setInputSearch }) => {
     <div className="header-container"> {/* Header container */}
       <h1>
         <Link to="/"> {/* Link to navigate back to the genre page */}
-          <img className="back-icon" src={backIcon} alt="Back" /> {/* Back icon */}
+          <img className="back-icon" src={backIcon} alt="Back" />
         </Link>
-        {genre} {/* Display the selected genre */}
+        {genre} 
       </h1>
       <input
         className="search-box" // Search input box

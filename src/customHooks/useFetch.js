@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'; // Axios for making HTTP requests
 
 // Custom hook to fetch books based on genre, page, and optional search term
-const useFetch = (genre, page, search="") => {
+const useFetch = (genre, page, search) => {
   const [books, setBooks] = useState([]); // State for the list of fetched books
   const [loading, setLoading] = useState(false); // State to indicate loading status
   const [lastPage, setLastPage] = useState(false); // State to determine if there are more pages
