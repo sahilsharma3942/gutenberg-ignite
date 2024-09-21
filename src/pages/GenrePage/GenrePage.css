@@ -1,0 +1,28 @@
+.genre-page-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-secondary);
+}
+
+.genre-header{
+  padding: 10px 250px;
+  background-image: url("../../assets/icons/Pattern.svg");
+  height: 200px;
+}
+
+.genre-subheading{
+  font-family: var(--font-family-semibold);
+  width: 800px;
+}
+
+.genre-body{
+  padding: 40px 220px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.genre-link{
+  text-decoration: none;
+}

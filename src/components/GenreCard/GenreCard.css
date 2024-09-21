@@ -1,0 +1,33 @@
+/* GenreCard.css */
+
+.genre-card-container {
+    border-radius: 4px;
+    padding: 15px;
+    height: 30px;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: space-between;
+    background-color: white;
+    font-family: var(--font-family-semibold);
+    font-size: 20px;
+    margin-right: 60px;
+  }
+  
+  .genre-card-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .genre-icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+  }
+  
+  .card-heading {
+    color: var(--color-grey-dark);
+    font-weight: 900;
+  }
+  
