@@ -5,9 +5,9 @@ import "./ListHeader.css"; // Import the CSS file
 import backIcon from "../../assets/icons/Back.svg"; // Import back icon
 
 // Header component for the list page
-const ListHeader = ({ genre, inputSearch, debouncedHandleSearch }) => {
+const ListHeader = ({ genre, inputSearch, debouncedHandleSearch , isMobile}) => {
   return (
-    <div className="header-container"> {/* Header container */}
+    <div className={isMobile?"mobile-header-container":"header-container"}> {/* Header container */}
       <h1>
         <Link to="/"> {/* Link to navigate back to the genre page */}
           <img className="back-icon" src={backIcon} alt="Back" />
@@ -15,7 +15,7 @@ const ListHeader = ({ genre, inputSearch, debouncedHandleSearch }) => {
         {genre} 
       </h1>
       <input
-        className="search-box" // Search input box
+        className={isMobile?"mobile-search-box":"search-box"} // Search input box
         type="text"
         placeholder="Search" // Placeholder text
         value={inputSearch} // Controlled input value

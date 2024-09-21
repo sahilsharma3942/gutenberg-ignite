@@ -31,3 +31,32 @@
     font-weight: 900;
   }
   
+/* Mobile styling */
+.mobile-genre-card-container{
+  border-radius: 4px;
+    padding: 5px;
+    height: 30px;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    background-color: white;
+    font-family: var(--font-family-semibold);
+    font-size: 18px;
+    margin:auto;
+}
+.mobile-genre-card-left {
+  display: flex;
+  align-items: center;
+}
+.mobile-genre-icon {
+  height: 18px;
+    width: 18px;
+    margin-right: 10px;
+}
+
+.mobile-card-heading {
+  color: var(--color-grey-dark);
+  font-weight: 900;
+}

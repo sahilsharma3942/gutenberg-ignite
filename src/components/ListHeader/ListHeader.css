@@ -4,7 +4,6 @@
     padding: 10px 250px;
     background-color: white;
     height: 180px;
-    position: sticky;
   }
   
   .back-icon {
@@ -34,4 +33,32 @@
   }
 
   
+  /* mobile syling */
+  .mobile-header-container {
+    padding: 0 10px 10px 10px;
+    background-color: white;
+    height: 150px;
+    
+  }
   
+  
+  .mobile-search-box {
+    border-radius: 4px;
+    padding-left: 30px;
+    padding-right: 10px;
+    height: 40px;
+    width: 80%;
+    background-image: url("../../assets/icons/Search.svg");
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border: 2px solid white;
+    background-color: var(--color-grey-light);
+    font-family: var(--font-family-semibold);
+    font-size: 16px;
+    color: var(--color-grey-medium);
+  }
+  
+  .mobile-search-box:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }

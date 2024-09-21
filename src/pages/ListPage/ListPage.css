@@ -3,3 +3,8 @@
     height: 100vh;
     background-color: var(--color-secondary);
 }
+
+.mobile-list-page-container{
+    background-color: var(--color-secondary);
+    height: 100vh;
+}

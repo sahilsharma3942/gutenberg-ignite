@@ -1,14 +1,13 @@
-// GenreCard component for individual genre display
 import React from 'react';
-import "./GenreCard.css" 
+import "./GenreCard.css"; 
 import nextIcon from '../../assets/icons/Next.svg';
 
-const GenreCard = ({ genre, iconSrc }) => {
+const GenreCard = ({ genre, iconSrc, isMobile }) => {
   return (
-    <div className="genre-card-container">
-      <div className="genre-card-left">
-        <img className="genre-icon" src={iconSrc} alt="" /> {/* Genre icon */}
-        <span className="card-heading">{genre}</span> {/* Genre name */}
+    <div className={isMobile ? "mobile-genre-card-container" : "genre-card-container"}> {/* Choose one class based on isMobile */}
+      <div className={isMobile ? "mobile-genre-card-left" : "genre-card-left"}>
+        <img className={isMobile ? "mobile-genre-icon" : "genre-icon"} src={iconSrc} alt="" /> {/* Genre icon */}
+        <span className={isMobile ? "mobile-card-heading" : "card-heading"}>{genre}</span> {/* Genre name */}
       </div>
       <div>
         <img src={nextIcon} alt="Next icon" /> {/* Next icon for navigation */}

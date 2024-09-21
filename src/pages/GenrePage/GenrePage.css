@@ -26,3 +26,19 @@
 .genre-link{
   text-decoration: none;
 }
+
+/* Mobile Styling */
+
+.mobile-genre-page-container {
+  background-color: var(--color-secondary);
+}
+.mobile-genre-header{
+  background-image: url("../../assets/icons/Pattern.svg");
+  padding: 10px;
+}
+.mobile-genre-body{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;  
+  gap: 12px;
+}

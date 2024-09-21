@@ -38,3 +38,46 @@
     text-align: left;
 
 }
+
+
+
+/* mobile styling */
+
+.mobile-book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    background-color: var(--color-secondary);
+    
+}
+
+.mobile-book-card {
+    cursor: pointer;
+}
+
+.mobile-book-cover {
+    width: 85px;
+    height: 120px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+}
+
+.mobile-book-name {
+    margin: 0;
+    font-size: 6px;
+    font-family: var(--font-family-regular);
+    color: var(--color-grey-dark);
+    width: 85px;
+    text-align: left;
+}
+
+.mobile-book-author {
+    margin: 0;
+    font-size: 6px;
+    font-family: var(--font-family-regular);
+    color: var(--color-grey-medium);
+    width: 85px;
+    text-align: left;
+
+}

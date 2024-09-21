@@ -8,7 +8,7 @@ import BookList from "../../components/BookList/BookList"; // Component for disp
 import Loader from "../../components/Loader/Loader"; // Loader component for loading state
 import "./ListPage.css"; // Styles for ListPage
 
-const ListPage = () => {                
+const ListPage = ({ isMobile }) => {
   const { genre } = useParams(); // Extract the genre from URL parameters
   const [page, setPage] = useState(1); // State to track the current page for pagination
   const [inputSearch, setInputSearch] = useState(""); // State for input search value
@@ -25,7 +25,7 @@ const ListPage = () => {
   const lastBookElementRef = useInfiniteScroll(loading, lastPage, setPage);
 
   const debouncedHandleSearch = (value) => {
-    setInputSearch(value)
+    setInputSearch(value);
     // Clear existing timeout if any
     if (timeoutId) clearTimeout(timeoutId);
 
@@ -41,15 +41,26 @@ const ListPage = () => {
   };
 
   return (
-    <div className="list-page-container"> {/* Container for the list page */}
+    <div
+      className={
+        isMobile ? "mobile-list-page-container" : "list-page-container"
+      }
+    >
+      {" "}
+      {/* Container for the list page */}
       <ListHeader
         genre={genre} // Pass genre to the ListHeader
         inputSearch={inputSearch} // Pass current search input
         setInputSearch={setInputSearch} // Function to update search input
-        debouncedHandleSearch = {debouncedHandleSearch}
+        debouncedHandleSearch={debouncedHandleSearch}
+        isMobile={isMobile}
       />
-      <BookList books={books} lastBookElementRef={lastBookElementRef} /> 
-      <Loader loading={loading} /> 
+      <BookList
+        books={books}
+        lastBookElementRef={lastBookElementRef}
+        isMobile={isMobile}
+      />
+      <Loader loading={loading} isMobile={isMobile} />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 import "./BookList.css"; // Import the CSS file
 
 // Component to display a list of books
-const BookList = ({ books, lastBookElementRef }) => {
+const BookList = ({ books, lastBookElementRef ,isMobile}) => {
   // Function to handle click on a book
   const handleBookClick = (book) => {
     const { formats } = book; // Get formats of the book
@@ -23,22 +23,22 @@ const BookList = ({ books, lastBookElementRef }) => {
   
 
   return (
-    <div className="book-container"> {/* Container for book cards */}
+    <div className={isMobile?"mobile-book-container":"book-container"}> {/* Container for book cards */}
       {books.map((book, index) => (
         
         <div
           ref={index === books.length - 1 ? lastBookElementRef : null} // Attach ref to the last book card for infinite scroll
-          className="book-card" // Style for individual book card
+          className={isMobile?"mobile-book-card":"book-card"} // Style for individual book card
           key={index} // Unique key for each card
           onClick={() => handleBookClick(book)} // Click handler for opening the book
         >
           <img
-            className="book-cover" // Cover image for the book
+            className={isMobile?"mobile-book-cover":"book-cover"} // Cover image for the book
             src={book.formats["image/jpeg"]} // Source for the book cover image
             alt={book.title} // Alt text for accessibility
           />
-          <h3 className="book-name">{book.title}</h3> {/* Display book title */}
-          <p className="book-author">
+          <h3 className={isMobile?"mobile-book-name":"book-name"}>{book.title}</h3> {/* Display book title */}
+          <p className={isMobile?"mobile-book-author":"book-author"}>
             {book.authors.map((author) => author.name).join(", ")} {/* Display authors' names */}
           </p>
         </div>
