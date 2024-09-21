@@ -1,9 +1,9 @@
 // GenrePage component to display all genres
 import React from "react";
 import "./GenrePage.css";
-import { GENRES } from "../../constants/genres"; // Importing genres from constants
 import { Link } from "react-router-dom"; // Link component for routing
 import GenreCard from "../../components/GenreCard/GenreCard"; // GenreCard component
+import { GENRES } from "../../constants/constants";
 
 const GenrePage = () => {
   return (

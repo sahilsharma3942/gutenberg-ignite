@@ -5,7 +5,7 @@ import "./ListHeader.css"; // Import the CSS file
 import backIcon from "../../assets/icons/Back.svg"; // Import back icon
 
 // Header component for the list page
-const ListHeader = ({ genre, inputSearch, setInputSearch }) => {
+const ListHeader = ({ genre, inputSearch, debouncedHandleSearch }) => {
   return (
     <div className="header-container"> {/* Header container */}
       <h1>
@@ -19,7 +19,7 @@ const ListHeader = ({ genre, inputSearch, setInputSearch }) => {
         type="text"
         placeholder="Search" // Placeholder text
         value={inputSearch} // Controlled input value
-        onChange={(e) => setInputSearch(e.target.value)} // Update inputSearch state on change
+        onChange={(e) => debouncedHandleSearch(e.target.value)} // Update inputSearch state on change
       />
     </div>
   );

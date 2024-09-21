@@ -15,3 +15,6 @@ export const GENRES = [
     { value: 'HISTORY', label: 'History', icon: HistoryIcon },
     { value: 'ADVENTURE', label: 'Adventure', icon: AdventureIcon },
   ]
+
+
+  export const baseURL = `http://skunkworks.ignitesol.com:8000/`;
