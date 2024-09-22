@@ -1,5 +1,9 @@
 Movie Catalog App - Using Gutenberg API
+
+
 Live Link - https://main--gutenberg-ignite.netlify.app
+
+
 Desktop View 
 
 Homepage - List of all Genres <img width="1470" alt="Screenshot 2024-09-22 at 11 49 47 AM" src="https://github.com/user-attachments/assets/23700957-23c7-4a61-b899-9b5abe68eb53">
